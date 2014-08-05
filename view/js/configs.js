@@ -4,13 +4,13 @@
 define(['angular', 'angularRoute', 'controllers'], function (angular) {
     'use strict';
 
-    return angular.module('seed.configs', ['ngRoute', 'seed.controllers'])
+    return angular.module('normal.configs', ['ngRoute', 'normal.controllers'])
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider
-                .when('/users/:uid', {
-                    templateUrl: 'partials/user.html',
-                    controller: 'UserCtrl'
+                .when('/question', {
+                    templateUrl: 'partials/question.html',
+                    controller: 'QuestionCtrl'
                 })
-                .otherwise({redirectTo: '/'});
+                .otherwise({redirectTo: '/question'});
         }]);
 });

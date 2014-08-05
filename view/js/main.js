@@ -41,7 +41,7 @@ window.name = "NG_DEFER_BOOTSTRAP!";
 
 require( [
 	'angular',
-    	'bootstrap',
+    'bootstrap',
 	'app'
 ], function(angular, bootstrap, app) {
 	'use strict';

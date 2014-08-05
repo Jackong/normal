@@ -1,0 +1,29 @@
+    <hr/>
+    <div class="alert alert-warning text-center" role="alert">
+        你的正常程度：<strong>{{normal > 100 ? 100 : normal}}%</strong>
+    </div>
+    <hr/>
+    <div class="center-block">
+        <img ng-src="{{question.image}}" class="img-rounded img-responsive">
+    </div>
+    <div class="well well-lg text-center">
+        <strong>{{question.content}}</strong>
+    </div>
+
+    <hr/>
+
+    <div class="btn-group btn-group-justified">
+        <div class="btn-group" ng-repeat="(idx, option) in question.options">
+            <button type="button" class="btn btn-{{idx%2==0? 'info':'success'}}" ng-click="select(idx)">{{option.label}}</button>
+        </div>
+    </div>
+
+
+    <br/>
+    <hr/>
+    <div class="alert alert-success text-center" role="alert">
+        <a href="#" class="alert-link">你不点这里，你正常吗？</a>
+    </div>
+    <div class="alert alert-info text-center" role="alert">
+        <a href="#" class="alert-link">我不正常！我就点这里！</a>
+    </div>
